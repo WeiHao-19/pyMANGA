@@ -70,7 +70,7 @@ class OGSLargeScale3D(BelowgroundCompetition):
         print("Running ogs...")
         bc_path = (path.dirname(path.dirname(path.abspath(__file__))))
         os.system(bc_path + "/OGS/bin/ogs " + current_project_file + " -o " +
-                  self._ogs_project_folder + " -l error")
+                  self._ogs_project_folder + " -l all")
         print("OGS-calculation done.")
         self.writePVDCollection()
         files = os.listdir(self._ogs_project_folder)
